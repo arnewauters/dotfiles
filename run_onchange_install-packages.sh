@@ -35,4 +35,8 @@ if ! [ -x "$(command -v asdf)" ]; then
   asdf install ruby latest
 fi
 
+if ! [ -x "$(command -v lua-language-server)" ]; then
+  brew install lua-language-server
+fi
+
 brew tap homebrew/cask-fonts && brew_install_cask "font-fira-code"
