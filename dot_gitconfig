@@ -1,0 +1,92 @@
+[protocol]
+  version = 2
+[alias]
+  aa = add --all
+  ap = add --patch
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:black)%(color:bold)%(refname:short)\" refs/remotes
+  ci = commit -v
+  co = checkout
+  pf = push --force-with-lease
+  st = status
+  ps = push
+  cp = cherry-pick
+  dic = diff --cached
+  rbc = !git rebase --continue && git status
+  rbi = !git fetch origin && git rebase -i origin/master
+  l = !git log --graph --pretty=colored
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  wip = !git add -A && "git commit -m 'wip [ci skip]'"
+  unwip = !test "`git log -n1 --pretty=format:%s`" = "wip" && git reset HEAD~1
+  unstage = reset -q HEAD --
+  discard = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  patch = !git --no-pager diff --no-color
+[core]
+  attributesfile = ~/.gitattributes
+  autocrlf = input
+  excludesfile = ~/.gitignore
+  ignorecase = false
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[fetch]
+  prune = true
+[pull]
+  rebase = false
+[push]
+  default = current
+  autoSetupRemote = true
+[commit]
+  template = ~/.gitmessage
+  gpgsign = true
+[merge]
+  ff = only
+[rebase]
+  autosquash = true
+[diff]
+  # Detect copies as well as renames
+  renames = copies
+  compactionHeuristic = true
+  colorMoved = default
+[diff "bin"]
+  # Use `hexdump` to diff binary files
+  textconv = hexdump -v -C
+[merge]
+  tool = opendiff
+[color]
+  ui = auto
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+  colorMoved = zebra
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[credential]
+  helper = osxkeychain
+[pretty]
+  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
+[user]
+  name = Arne Wauters
+  email = arne.wauters@gmail.com
+  signingkey = AD1C59808A766D6B
+[help]
+  autocorrect = 1
+[include]
+  path = ~/.gitconfig.local
+[init]
+  defaultBranch = main
