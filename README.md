@@ -9,6 +9,7 @@
 ```sh
 chezmoi init git@github.com:arnewauters/dotfiles.git
 ```
+3. Install [GPG Suite](https://gpgtools.org/) to have GPG password in OSX keychain
 
 ### Font Symbols
 
