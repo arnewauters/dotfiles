@@ -6,7 +6,9 @@
 
 2. Init chezmoi.
 
-> chezmoi init git@github.com:arnewauters/dotfiles.git
+```sh
+chezmoi init git@github.com:arnewauters/dotfiles.git
+```
 
 ### Font Symbols
 
@@ -24,19 +26,27 @@ folder. It does not use symlinks.
 
 Adding files to manage with `chezmoi`:
 
-> chezmoi add ~./<FILE>
+```sh
+chezmoi add ~./<FILE>
+```
 
 Diffing to see what will be applied:
 
-> chezmoi diff
+```sh
+chezmoi diff
+```
 
 Applying changes (verbose):
 
-> chezmoi -v apply
+```sh
+chezmoi -v apply
+```
 
 Pulling and applying from dotfiles repo:
 
+```sh
 > chezmoi update -v
+```
 
 ## Dotfiles notes
 
