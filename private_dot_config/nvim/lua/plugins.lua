@@ -127,4 +127,12 @@ packer.startup(function()
     end,
     requires = { 'nvim-tree/nvim-web-devicons' }
   })
+
+  use({
+    'phaazon/hop.nvim',
+    branch = 'v2',
+    config = function()
+      require('plugins.hop')
+    end
+  })
 end)
