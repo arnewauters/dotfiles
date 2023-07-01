@@ -83,7 +83,9 @@
 [user]
   name = Arne Wauters
   email = arne.wauters@gmail.com
-  signingkey = AD1C59808A766D6B
+  signingkey = 41D73C62086BBB27
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg2
 [help]
   autocorrect = 1
 [include]

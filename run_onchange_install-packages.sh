@@ -35,5 +35,4 @@ if ! [ -x "$(command -v asdf)" ]; then
   asdf install ruby latest
 fi
 
-brew_install "gnupg"
 brew tap homebrew/cask-fonts && brew_install_cask "font-fira-code"

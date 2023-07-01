@@ -11,6 +11,8 @@ chezmoi init git@github.com:arnewauters/dotfiles.git
 ```
 3. Install [GPG Suite](https://gpgtools.org/) to have GPG password in OSX keychain
 
+4. Import your GPG key
+
 ### Font Symbols
 
 > Do not use patched fonts! See Kitty pages. Instead:
