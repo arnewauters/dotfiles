@@ -22,6 +22,10 @@ if ! [ -x "$(command -v kitty)" ]; then
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh
 fi
 
+if [ -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 if ! [ -x "$(command -v starship)" ]; then
   curl -sS https://starship.rs/install.sh | sh
 fi
@@ -38,5 +42,18 @@ fi
 if ! [ -x "$(command -v lua-language-server)" ]; then
   brew install lua-language-server
 fi
+
+if ! [ -x "$(command -v fzf)" ]; then
+  brew install fzf
+fi
+
+if ! [ -x "$(command -v rg)" ]; then
+  brew install ripgrep
+fi
+
+if ! [ -x "$(command -v fd)" ]; then
+  brew install fd
+fi
+
 
 brew tap homebrew/cask-fonts && brew_install_cask "font-fira-code"
