@@ -22,7 +22,7 @@ if ! [ -x "$(command -v kitty)" ]; then
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh
 fi
 
-if [ -d ~/.oh-my-zsh ]; then
+if ! [ -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
