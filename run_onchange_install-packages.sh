@@ -30,14 +30,14 @@ if ! [ -x "$(command -v starship)" ]; then
   curl -sS https://starship.rs/install.sh | sh
 fi
 
-if ! [ -x "$(command -v asdf)" ]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
-  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  asdf install nodejs latest
-
-  asdf plugin add ruby
-  asdf install ruby latest
-fi
+# if ! [ -x "$(command -v asdf)" ]; then
+#   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+#   asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+#   asdf install nodejs latest
+#
+#   asdf plugin add ruby
+#   asdf install ruby latest
+# fi
 
 if ! [ -x "$(command -v lua-language-server)" ]; then
   brew install lua-language-server
@@ -53,6 +53,10 @@ fi
 
 if ! [ -x "$(command -v fd)" ]; then
   brew install fd
+fi
+
+if ! [ -x "$(command -v rtx)" ]; then
+  curl https://rtx.pub/install.sh | sh
 fi
 
 
