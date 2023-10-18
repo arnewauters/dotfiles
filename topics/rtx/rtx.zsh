@@ -1,1 +1,1 @@
-echo 'eval "$(~/.local/share/rtx/bin/rtx activate zsh)"' >> ~/.zshrc
+eval "$(~/.local/share/rtx/bin/rtx activate zsh)"
