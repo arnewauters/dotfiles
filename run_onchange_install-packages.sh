@@ -59,5 +59,9 @@ if ! [ -x "$(command -v rtx)" ]; then
   curl https://rtx.pub/install.sh | sh
 fi
 
+brew_install zlib
+brew_install readline
+brew_install libyaml
+brew install libffi
 
 brew tap homebrew/cask-fonts && brew_install_cask "font-fira-code"
