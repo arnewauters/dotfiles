@@ -62,6 +62,7 @@ fi
 brew_install zlib
 brew_install readline
 brew_install libyaml
-brew install libffi
+brew_install libffi
+brew_install openssl
 
 brew tap homebrew/cask-fonts && brew_install_cask "font-fira-code"
