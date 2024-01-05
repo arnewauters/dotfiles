@@ -55,8 +55,8 @@ if ! [ -x "$(command -v fd)" ]; then
   brew install fd
 fi
 
-if ! [ -x "$(command -v rtx)" ]; then
-  curl https://rtx.pub/install.sh | sh
+if ! [ -x "$(command -v mise)" ]; then
+  curl https://mise.jdx.dev/install.sh | sh
 fi
 
 brew_install zlib
