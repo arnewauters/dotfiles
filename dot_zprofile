@@ -1,0 +1,4 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# add shims to path to support VSCode extensions like standardrb
+export PATH="$HOME/.local/share/mise/shims:$PATH"
